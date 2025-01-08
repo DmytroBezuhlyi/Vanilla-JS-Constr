@@ -5,7 +5,7 @@ export const model = [
   new TitleBlock(
     "Pure JS site constructor",
     {
-      tag: "h2",
+      tag: "h1",
       styles: {
         background: "linear-gradient(to right, blue, teal)",
         color: "#fff",
