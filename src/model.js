@@ -3,9 +3,9 @@ import { TitleBlock, TextBlock, ImageBlock, ColumnsBlock } from "./classes/block
 
 export const model = [
   new TitleBlock(
-    "Pure JS site constructor",
+    "Pure JS site constructor - cut version",
     {
-      tag: "h1",
+      tag: "h2",
       styles: {
         background: "linear-gradient(to right, blue, teal)",
         color: "#fff",
