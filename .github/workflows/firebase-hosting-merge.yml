@@ -26,8 +26,17 @@ jobs:
 
       # Step 4: Deploy to Firebase
       - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VANILLA_JS_CONST }}
+          channelId: live
+          projectId: vanilla-js-const
         env:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VANILLA_JS_CONST }}
+
+      # Step 5: Run deployment
+      - name: Run Deployment
         run: firebase deploy
 
 #      - uses: FirebaseExtended/action-hosting-deploy@v0
